@@ -1,3 +1,18 @@
+
+// The listener that redirects the user when they click the extension’s icon
+chrome.action.onClicked.addListener(() => {
+    chrome.tabs.create({ url: "https://degeneratevpn.com" });
+});
+
+
+
+
+
+
+
+
+
+
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   console.log("Background received:", message);
 
@@ -41,3 +56,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
   return true; // Keep response channel open for async responses
 });
+
+
+
+
+
